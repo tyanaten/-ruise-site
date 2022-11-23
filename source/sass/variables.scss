@@ -3,8 +3,8 @@
 
 // Default
 
-$color-default-black:               #000000;
-$color-default-white:               #ffffff;
+$color-default-black:               #011c40;
+$color-default-white:               #f9fbfd;
 $color-transparent:                 rgba(255, 255, 255, 0);
 
 // Project palette
@@ -25,9 +25,9 @@ $fz-default:                        16px;
 
 // у некоторых шрифтов в ios возникают проблемы с символом рубля
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
-$ff-rouble:                         "Rouble", "Arial", sans-serif;
+$ff-rouble:                         "Montserrat", "Arial", sans-serif;
 
-$ff-placeholder:                    "Placeholder", "Arial", sans-serif;
+$ff-placeholder:                    "Montserrat", "Arial", sans-serif;
 
 // Animation
 // ---------------------------------
@@ -56,3 +56,9 @@ $vp-1920:                           1920px;
 
 $retina-dpi:                        144dpi;
 $retina-dppx:                       1.5dppx;
+
+// Wrapper
+
+$vr-290:                            290px;
+$vr-678:                            678px;
+$vr-1160:                          1160px;
