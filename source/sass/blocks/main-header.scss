@@ -1,5 +1,5 @@
 .main-header {
-  background-color: #00326C;
+  background-color: #00326C; //delete!
 
   @include vp-767 {
     &[data-header-state="no-js"] {
@@ -35,6 +35,20 @@
     &[data-header-state="no-js"] {
       flex-direction: column;
       justify-content: flex-start;
+      transition: 1.5s;
+    }
+
+    &[data-header-state="open"] {
+      position: relative;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 89%;
+      min-width: 285px;
+      min-height: 100vh;
+      margin-right: 0;
+      padding: 20px 4.7% 0 15px;
+      background-color: $color-default-white;
+      transition: 1.5s;
     }
   }
 }
@@ -44,6 +58,12 @@
   width: 70px;
   height: 38px;
   cursor: pointer;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: $color-default-white;
+  }
 
   @include vp-1023 {
     width: 38px;
@@ -62,12 +82,14 @@
         fill: $color-default-black;
       }
     }
-  }
 
-  svg {
-    width: 100%;
-    height: 100%;
-    fill: $color-default-white;
+    &[data-header-state="open"] {
+      margin-bottom: 0;
+
+      svg {
+        fill: $color-default-black;
+      }
+    }
   }
 
   @include hover-focus {
@@ -93,8 +115,15 @@
     background-repeat: no-repeat;
     cursor: pointer;
 
-    &--closed {
+    &[data-header-state="closed"] {
       background-image: url("../img/svg/burger.svg");
+    }
+
+    &[data-header-state="open"] {
+      position: absolute;
+      top: 25px;
+      right: 4.7%;
+      background-image: url("../img/svg/cross.svg");
     }
 
     &[data-header-state="no-js"] {

@@ -13,6 +13,16 @@
     max-width: 100%;
     margin: 0;
     margin-top: 33px;
+
+    &[data-header-state="closed"] {
+      display: none;
+    }
+
+    &[data-header-state="open"] {
+      .nav-list__item {
+        margin-right: 15px;
+      }
+    }
   }
 }
 
@@ -39,7 +49,6 @@
 .nav-list__link {
   display: block;
   padding: 5px 0;
-  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
