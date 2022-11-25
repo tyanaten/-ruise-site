@@ -1,5 +1,11 @@
 .main-header {
   background-color: #00326C;
+
+  @include vp-767 {
+    &[data-header-state="no-js"] {
+      background-color: $color-default-white;
+    }
+  }
 }
 
 .main-header__wrapper {
@@ -25,6 +31,11 @@
     min-width: $vr-290;
     width: 90.62%;
     padding-top: 20px;
+
+    &[data-header-state="no-js"] {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
   }
 }
 
@@ -44,10 +55,11 @@
     z-index: 5;
     width: 42px;
     height: 22px;
+    margin-right: auto;
 
-    &--nojs {
+    &[data-header-state="no-js"] {
       svg {
-        fill: red;
+        fill: $color-default-black;
       }
     }
   }
@@ -85,7 +97,7 @@
       background-image: url("../img/svg/burger.svg");
     }
 
-    &--nojs {
+    &[data-header-state="no-js"] {
       display: none;
     }
   }
