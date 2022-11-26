@@ -1,0 +1,56 @@
+.main-footer {
+  background-color: $color-default-black;
+}
+
+.main-footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 84.9%;
+  max-width: $vr-1160;
+  min-height: 138px;
+  margin: 0 auto;
+  padding: 50px 0;
+
+  @include vp-1023 {
+    min-width: $vr-678;
+    width: 88.3%;
+    min-height: 120px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    min-width: $vr-290;
+    width: 90.62%;
+    min-height: auto;
+    padding: 40px 0;
+  }
+}
+
+.main-footer__logo-link {
+  margin-bottom: auto;
+  width: 70px;
+  height: 38px;
+  cursor: pointer;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    fill: $color-default-white;
+  }
+
+  @include vp-1023 {
+    width: 38px;
+    height: 20px;
+  }
+
+  @include vp-767 {
+    width: 42px;
+    height: 22px;
+    margin-bottom: 27px;
+  }
+
+  @include hover-focus {
+    opacity: 0.6;
+  }
+}

@@ -1,5 +1,6 @@
 .main-header {
-  background-color: #00326C; //delete!
+  position: relative;
+  z-index: 10;
 
   @include vp-767 {
     &[data-header-state="no-js"] {
@@ -18,8 +19,6 @@
   margin: 0 auto;
   padding-top: 35px;
 
-  outline: 1px solid red; //delete!
-
   @include vp-1023 {
     min-width: $vr-678;
     width: 88.3%;
@@ -35,11 +34,13 @@
     &[data-header-state="no-js"] {
       flex-direction: column;
       justify-content: flex-start;
-      transition: 1.5s;
+      transition: 0.5s;
     }
 
     &[data-header-state="open"] {
-      position: relative;
+      position: absolute;
+      top: 0;
+      right: 0;
       flex-direction: column;
       justify-content: flex-start;
       width: 89%;
@@ -48,7 +49,7 @@
       margin-right: 0;
       padding: 20px 4.7% 0 15px;
       background-color: $color-default-white;
-      transition: 1.5s;
+      transition: 0.5s;
     }
   }
 }

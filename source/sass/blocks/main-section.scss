@@ -1,0 +1,126 @@
+.main-section {
+  position: relative;
+  z-index: 1;
+  top: -73px;
+  margin-bottom: -83px;
+  background-color: #00417f;
+  background-image: url("../img/main-image@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  aspect-ratio: 2.1 / 1;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+
+  @media (max-width: 2000px) {
+    @include retina {
+      background-image: url("../img/main-image@2x.jpg");
+    }
+  }
+
+  @include vp-1023 {
+    top: -50px;
+    margin-bottom: -60px;
+    background-image: url("../img/main-image-tablet@1x.jpg");
+    aspect-ratio: 1.33 / 1;
+    filter: none;
+
+    @include retina {
+      background-image: url("../img/main-image-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: 852px) {
+    aspect-ratio: initial;
+  }
+
+  @include vp-767 {
+    top: -42px;
+    margin-bottom: -52px;
+    background-image: url("../img/main-image-mobile@1x.jpg");
+    background-size: cover;
+    background-position: 46% 0;
+    aspect-ratio: 1.5 / 1;
+
+    &[data-header-state="no-js"],
+    &[data-header-state="open"] {
+      margin-bottom: 0;
+      top: 0;
+    }
+
+    @include retina {
+      background-image: url("../img/main-image-mobile@2x.jpg");
+    }
+  }
+
+  @media (max-width: 665px) {
+    aspect-ratio: initial;
+  }
+}
+
+.main-section__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 84.9%;
+  max-width: $vr-1160;
+  min-height: 90%;
+  margin: 0 auto;
+  padding: 83px 50px 10px 95px;
+
+  @include vp-1023 {
+    min-width: $vr-678;
+    width: 88.3%;
+    min-height: 638px;
+    padding: 60px 0 10px 0;
+  }
+
+  @include vp-767 {
+    min-width: $vr-290;
+    width: 90.62%;
+    min-height: 500px;
+    padding: 52px 0 10px 0;
+  }
+
+  h1 {
+    margin: 0;
+    margin-bottom: 30px;
+    font-size: 54px;
+    line-height: 66px;
+    font-weight: 700;
+    color: $color-default-white;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    @include vp-1023 {
+      margin-bottom: 29px;
+      font-size: 50px;
+      line-height: 61px;
+    }
+
+    @include vp-767 {
+      margin-top: -27px;
+      margin-bottom: 13px;
+      font-size: 36px;
+      line-height: 45px;
+    }
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 24px;
+    color: $color-default-white;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    @include vp-1023 {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @include vp-767 {
+      width: 80%;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}
