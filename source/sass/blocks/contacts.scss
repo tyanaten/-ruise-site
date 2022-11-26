@@ -1,0 +1,131 @@
+.contacts__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 84.9%;
+  max-width: $vr-1160;
+  min-height: 546px;
+  margin: 0 auto;
+  padding: 120px 0;
+
+  @include vp-1023 {
+    min-width: $vr-678;
+    width: 88.3%;
+    min-height: 535px;
+    padding: 100px 0;
+  }
+
+  @include vp-767 {
+    flex-direction: column-reverse;
+    min-width: $vr-290;
+    width: 90.62%;
+    min-height: 703px;
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+}
+
+.contacts__map {
+  width: clamp(100px, 48.4%, 560px);
+  min-height: 306px;
+  background-image: url("../img/map-desktop@1x.png");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  background-color: #e9e7e1;
+  aspect-ratio: 1.83 / 1;
+
+  @media (max-width: 2000px) {
+    @include retina {
+      background-image: url("../img/map-desktop@2x.png");
+    }
+  }
+
+  @include vp-1023 {
+    width: clamp(324px, 47.8%, 500px);
+    min-height: 335px;
+    background-image: url("../img/map-tablet@1x.png");
+    aspect-ratio: 1 / 1.03;
+
+    @include retina {
+      background-image: url("../img/map-tablet@2x.png");
+    }
+  }
+
+  @include vp-767 {
+    width: 100%;
+    min-height: 316px;
+    background-image: url("../img/map-mobile@1x.png");
+    aspect-ratio: 1 / 1.08;
+
+    @include retina {
+      background-image: url("../img/map-mobile@2x.png");
+    }
+  }
+}
+
+.contacts__info {
+  width: clamp(100px, 43.1%, 500px);
+  margin-top: 81px;
+
+  @include vp-1023 {
+    width: clamp(324px, 47.8%, 500px);
+    margin-top: 72px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+}
+
+.contacts__subtitle {
+  margin: 0 auto;
+  margin-bottom: 45px;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+
+  @include vp-1023 {
+    margin-bottom: 40px;
+  }
+}
+
+.contacts__contact {
+  margin: 0 auto;
+  margin-bottom: 25px;
+  padding: 5px 0;
+  padding-left: 28px;
+  background-position: top 5px left 0;
+  background-repeat: no-repeat;
+
+  @include vp-1023 {
+    margin-bottom: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-position: top 0 left 0;
+  }
+
+  @include vp-767 {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &--adress {
+    background-size: 18px 22px;
+    background-image: url("../../img/sprite/map-pin.svg");
+  }
+
+  &--tel {
+    background-size: 18px 18px;
+    background-image: url("../../img/sprite/cell-phone.svg");
+  }
+}
+
+.contacts__tel-link {
+  &:hover {
+    opacity: 0.6;
+  }
+}
