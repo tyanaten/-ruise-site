@@ -924,7 +924,7 @@ button,
   max-width: 1160px;
   min-height: 566px;
   margin: 0 auto;
-  padding: 120px 0 15px 0;
+  padding: 120px 0 30px 0;
 }
 
 .travelling__wrapper picture {
@@ -1356,6 +1356,197 @@ button,
   opacity: 0.6;
 }
 
+.form-section {
+  background-color: #badefb;
+  background-image: url("../img/form-image@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+}
+
+.form-section__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 84.9%;
+  max-width: 1160px;
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 50px 60px;
+}
+
+.form-section__wrapper h2 {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: 700;
+}
+
+.form-section__text {
+  width: 71%;
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.form-section__info {
+  width: clamp(100px, 48.1%, 500px);
+}
+
+.form {
+  width: 403px;
+  padding: 50px;
+  background-color: #011c40;
+  -webkit-box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
+  box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
+}
+
+.form__text {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 35px;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  text-align: start;
+  color: #f9fbfd;
+}
+
+.form__field {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.form__field input {
+  width: 100%;
+  height: 100%;
+  padding: 12.5px 16px;
+  font-size: 14px;
+  line-height: 21px;
+  color: #011c40;
+  background: #f9fbfd;
+  border: none;
+}
+
+.form__field input::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form__field input::-moz-placeholder {
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form__field input:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form__field input::-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form__field input::placeholder {
+  font-size: 14px;
+  line-height: 21px;
+  color: rgba(1, 28, 64, 0.7);
+}
+
+.form__field input.focus-visible:focus {
+  outline: 3px solid #badefb;
+}
+
+.form__field input:focus:required:invalid {
+  outline: 3px solid #badefb;
+}
+
+.form__submit-button {
+  width: 100%;
+  min-height: 43px;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 600;
+  color: #011c40;
+  background-color: #f9fbfd;
+  border: none;
+  cursor: pointer;
+}
+
+.form__submit-button:hover {
+  opacity: 0.6;
+}
+
+.custom-checkbox {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.custom-checkbox label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.custom-checkbox input[type=checkbox]:checked + .custom-checkbox__mark::before {
+  display: block;
+}
+
+.custom-checkbox:focus-within .custom-checkbox__mark {
+  outline: 3px solid #badefb;
+}
+
+.custom-checkbox__label {
+  display: block;
+  margin: 0;
+  font-size: 10px;
+  line-height: 13px;
+  font-weight: 400;
+  color: #f9fbfd;
+}
+
+.custom-checkbox__mark {
+  position: relative;
+  top: -2.5px;
+  display: block;
+  min-width: 18px;
+  height: 18px;
+  margin-right: 5px;
+  background-color: #f9fbfd;
+  border: none;
+}
+
+.custom-checkbox__mark::before {
+  position: absolute;
+  content: "";
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url("../img/svg/done.svg");
+  background-position: top 6px left 4px;
+  background-repeat: no-repeat;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -1396,6 +1587,16 @@ button,
     }
   }
 */
+
+@media (min-width: 1366px) {
+  .form-section {
+    aspect-ratio: 2.46/1;
+  }
+
+  .form-section__wrapper {
+    margin: auto;
+  }
+}
 
 @media (max-width: 2000px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 2000px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 2000px) and (min-resolution: 144dpi), (max-width: 2000px) and (min-resolution: 1.5dppx) {
   .main-section {
@@ -1620,6 +1821,42 @@ button,
 
   .cruise-card__info {
     padding: 35px;
+  }
+
+  .form-section__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-width: 678px;
+    width: 88.3%;
+    padding: 100px 129px;
+  }
+
+  .form-section__wrapper h2 {
+    margin-bottom: 25px;
+    font-size: 34px;
+    line-height: 51px;
+    text-align: center;
+  }
+
+  .form-section__text {
+    display: block;
+    width: 84%;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  .form-section__info {
+    width: 100%;
+  }
+
+  .form {
+    width: 96.1%;
   }
 }
 
@@ -1994,6 +2231,56 @@ button,
   .cruise-card__info {
     padding: 35px 25px;
   }
+
+  .form-section__wrapper {
+    min-width: 290px;
+    width: 90.62%;
+    padding: 65px 0;
+  }
+
+  .form-section__wrapper h2 {
+    display: block;
+    width: 66.9%;
+    margin: 0 auto 25px auto;
+    font-size: 24px;
+    line-height: 31px;
+  }
+
+  .form-section__text {
+    width: 88.6%;
+    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .form {
+    width: 100%;
+    padding: 40px 30px;
+  }
+
+  .form__text {
+    display: block;
+    width: 93%;
+    margin: 0 auto 35px auto;
+    line-height: 25px;
+    text-align: center;
+  }
+
+  .custom-checkbox {
+    width: 78.3%;
+    margin-top: 0;
+  }
+
+  .custom-checkbox__label {
+    line-height: 12px;
+  }
+
+  .custom-checkbox__mark {
+    top: 0;
+    min-width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
 }
 
 @media (max-width: 767px) and (hover: hover) {
@@ -2047,6 +2334,14 @@ button,
   .footer-list__link:hover:not(.focus-visible) {
     opacity: 0.6;
   }
+
+  .form__field input:hover:not(.focus-visible) {
+    outline: 3px solid #badefb;
+  }
+
+  .custom-checkbox label:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
@@ -2084,5 +2379,9 @@ button,
 
   .cruise-card__cover--minion {
     background-image: url("../img/catalog/cruise-minion@2x.jpg");
+  }
+
+  .form-section {
+    background-image: url("../img/form-image@2x.jpg");
   }
 }

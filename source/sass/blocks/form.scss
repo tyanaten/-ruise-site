@@ -1,0 +1,82 @@
+.form {
+  width: 403px;
+  padding: 50px;
+  background-color: $color-default-black;
+  box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
+
+  @include vp-1023 {
+    width: 96.1%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    padding: 40px 30px;
+  }
+}
+
+.form__text {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 35px;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  text-align: start;
+  color: $color-default-white;
+
+  @include vp-767 {
+    display: block;
+    width: 93%;
+    margin: 0 auto 35px auto;
+    line-height: 25px;
+    text-align: center;
+  }
+}
+
+.form__field {
+  display: block;
+  margin-bottom: 20px;
+
+  input {
+    width: 100%;
+    height: 100%;
+    padding: 12.5px 16px;
+    font-size: 14px;
+    line-height: 21px;
+    color: $color-default-black;
+    background: $color-default-white;
+    border: none;
+
+    &::placeholder {
+      font-size: 14px;
+      line-height: 21px;
+      color: rgba(1, 28, 64, 0.7);
+    }
+
+    @include hover-focus {
+      outline: 3px solid #badefb;
+    }
+
+    &:focus:required:invalid {
+      outline: 3px solid #badefb;
+    }
+  }
+}
+
+.form__submit-button {
+  width: 100%;
+  min-height: 43px;
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 600;
+  color: $color-default-black;
+  background-color: $color-default-white;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}

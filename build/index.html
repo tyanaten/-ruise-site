@@ -119,27 +119,6 @@
             </ul>
           </div>
         </section>
-        <section class="contacts">
-          <h2 class="visually-hidden">Контакты</h2>
-          <div  class="contacts__wrapper">
-            <div class="contacts__map" id="map" data-map-state="no-js">
-            </div>
-            <div class="contacts__info">
-              <p class="contacts__subtitle">
-                У&nbsp;вас ещё остались вопросы или сомнения?
-                Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.
-              </p>
-              <p class="contacts__contact contacts__contact--adress">
-                г. Санкт Петербург, ул.&nbsp;Большая Конюшенная, 19/8
-              </p>
-              <p class="contacts__contact contacts__contact--tel">
-                <a class="contacts__tel-link" href="tel:+78002000000">
-                  8-800-200-00-00
-                </a>
-              </p>
-            </div>
-          </div>
-        </section>
         <section class="cruises">
           <div class="cruises__wrapper">
             <h2 class="cruises__title">
@@ -523,6 +502,77 @@
                 </div>
               </li>
             </ul>
+          </div>
+        </section>
+        <section class="form-section">
+          <div class="form-section__wrapper">
+            <div class="form-section__info">
+              <h2 class="form-section__subtitle">
+                Раннее бронирование
+              </h2>
+              <p class="form-section__text">
+                Забронируйте тур за&nbsp;3&#8209;6&nbsp;месяцев до&nbsp;даты выезда и&nbsp;сэкономьте до&nbsp;50%
+              </p>
+            </div>
+            <form class="form-section__form form" action="https://echo.htmlacademy.ru/" method="post">
+              <p class="form__text">
+                Оставьте заявку и&nbsp;мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время
+              </p>
+              <div class="form__field">
+                <label class="visually-hidden" for="name">Имя</label>
+                <input type="text" name="name" id="name" placeholder="Имя" required minlength="1">
+                <div class="form__error visually-hidden" data-error-message="name">
+                  Имя кириллицей без пробелов
+                </div>
+              </div>
+              <div class="form__field">
+                <label class="visually-hidden" for="tel">Номер телефона</label>
+                <input type="tel" name="tel" id="tel" placeholder="Телефон" required pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$">
+                <div class="form__error visually-hidden" data-error-message="tel">
+                  Необходим полный номер телефона
+                </div>
+              </div>
+              <div class="form__field">
+                <label class="visually-hidden" for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <div class="form__error visually-hidden"  data-error-message="email">
+                  Введите корректную почту
+                </div>
+              </div>
+              <div class="form__checkbox custom-checkbox">
+                <label>
+                  <input class="visually-hidden" type="checkbox" name="agreement" required>
+                  <span class="custom-checkbox__mark"></span>
+                  <span class="custom-checkbox__label">
+                    Я&nbsp;согласен на&nbsp;обработку моих персональных данных
+                  </span>
+                </label>
+              </div>
+              <button class="form__submit-button" type="submit" data-form-submit>
+                Оставить заявку
+              </button>
+            </form>
+          </div>
+        </section>
+        <section class="contacts">
+          <h2 class="visually-hidden">Контакты</h2>
+          <div  class="contacts__wrapper">
+            <div class="contacts__map" id="map" data-map-state="no-js">
+            </div>
+            <div class="contacts__info">
+              <p class="contacts__subtitle">
+                У&nbsp;вас ещё остались вопросы или сомнения?
+                Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.
+              </p>
+              <p class="contacts__contact contacts__contact--adress">
+                г. Санкт Петербург, ул.&nbsp;Большая Конюшенная, 19/8
+              </p>
+              <p class="contacts__contact contacts__contact--tel">
+                <a class="contacts__tel-link" href="tel:+78002000000">
+                  8-800-200-00-00
+                </a>
+              </p>
+            </div>
           </div>
         </section>
       </main>
