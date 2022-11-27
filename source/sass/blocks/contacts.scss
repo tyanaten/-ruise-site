@@ -35,6 +35,10 @@
   background-color: #e9e7e1;
   aspect-ratio: 1.83 / 1;
 
+  &[data-map-state="with-js"] {
+    aspect-ratio: initial;
+  }
+
   @media (max-width: 2000px) {
     @include retina {
       background-image: url("../img/map-desktop@2x.png");

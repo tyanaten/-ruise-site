@@ -575,6 +575,16 @@ button,
   min-height: calc(100 * var(--vh, 1vh));
 }
 
+.wrapper[data-header-state=open] {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.wrapper[data-header-state=closed] {
+  max-height: auto;
+  overflow: auto;
+}
+
 .wrapper .header,
 .wrapper .footer {
   -ms-flex-negative: 0;
@@ -792,6 +802,7 @@ button,
 }
 
 .main-header__wrapper {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -834,6 +845,9 @@ button,
 }
 
 .nav-list {
+  position: absolute;
+  top: 35px;
+  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1158,6 +1172,10 @@ button,
   aspect-ratio: 1.83/1;
 }
 
+.contacts__map[data-map-state=with-js] {
+  aspect-ratio: initial;
+}
+
 .contacts__info {
   width: clamp(100px, 43.1%, 500px);
   margin-top: 81px;
@@ -1339,7 +1357,8 @@ button,
   margin-bottom: 20px;
 }
 
-.cruise-card__button {
+.cruise-card__link {
+  display: block;
   width: 100%;
   margin-top: 10px;
   padding: 9.5px 10px;
@@ -1347,12 +1366,13 @@ button,
   line-height: 21px;
   color: #011c40;
   font-weight: 600;
+  text-align: center;
   background-color: #f9fbfd;
   border: none;
   cursor: pointer;
 }
 
-.cruise-card__button:hover {
+.cruise-card__link:hover {
   opacity: 0.6;
 }
 
@@ -1421,6 +1441,7 @@ button,
 }
 
 .form__field {
+  position: relative;
   display: block;
   margin-bottom: 20px;
 }
@@ -1490,6 +1511,16 @@ button,
 
 .form__submit-button:hover {
   opacity: 0.6;
+}
+
+.form__error {
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  margin-left: 15px;
+  font-size: 10px;
+  line-height: 11px;
+  color: #ff1553;
 }
 
 .custom-checkbox {
@@ -1628,6 +1659,10 @@ button,
   .main-header__link {
     width: 38px;
     height: 20px;
+  }
+
+  .nav-list {
+    top: 30px;
   }
 
   .nav-list__item:not(:last-child) {
@@ -1931,13 +1966,17 @@ button,
     justify-content: flex-start;
     width: 89%;
     min-width: 285px;
-    min-height: 100vh;
+    min-height: -webkit-max-content;
+    min-height: -moz-max-content;
+    min-height: max-content;
+    height: 100vh;
     margin-right: 0;
     padding: 20px 4.7% 0 15px;
     background-color: #f9fbfd;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
     transition: 0.5s;
+    overflow: auto;
   }
 
   .main-header__link {

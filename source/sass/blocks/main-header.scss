@@ -10,6 +10,7 @@
 }
 
 .main-header__wrapper {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,11 +46,13 @@
       justify-content: flex-start;
       width: 89%;
       min-width: 285px;
-      min-height: 100vh;
+      min-height: max-content;
+      height: 100vh;
       margin-right: 0;
       padding: 20px 4.7% 0 15px;
       background-color: $color-default-white;
       transition: 0.5s;
+      overflow: auto;
     }
   }
 }

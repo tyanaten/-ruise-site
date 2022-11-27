@@ -34,6 +34,7 @@
 }
 
 .form__field {
+  position: relative;
   display: block;
   margin-bottom: 20px;
 
@@ -79,4 +80,14 @@
   &:hover {
     opacity: 0.6;
   }
+}
+
+.form__error {
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  margin-left: 15px;
+  font-size: 10px;
+  line-height: 11px;
+  color: $color-torch-red;
 }
