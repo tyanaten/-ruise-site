@@ -1,0 +1,53 @@
+.cruises__wrapper {
+  width: 84.9%;
+  max-width: $vr-1160;
+  min-height: 300px;
+  margin: 0 auto;
+  padding: 95px 15px 120px 15px;
+
+  @include vp-1023 {
+    min-width: $vr-678;
+    width: 88.3%;
+    padding: 100px 15px 100px 15px;
+  }
+
+  @include vp-767 {
+    min-width: $vr-290;
+    width: 90.62%;
+    padding: 65px 10px 65px 10px;
+  }
+
+  h2 {
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    font-size: 28px;
+    line-height: 42px;
+    font-weight: 600;
+
+    @include vp-1023 {
+      font-size: 26px;
+      line-height: 39px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 40px;
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+}
+
+.cruises__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+
+  @include vp-1023 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
