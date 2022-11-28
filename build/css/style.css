@@ -846,8 +846,8 @@ button,
 
 .nav-list {
   position: absolute;
-  top: 35px;
-  right: 0;
+  top: 40px;
+  right: 2px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -916,6 +916,7 @@ button,
 
 .main-section__wrapper h1 {
   margin: 0;
+  margin-top: 16px;
   margin-bottom: 30px;
   font-size: 54px;
   line-height: 66px;
@@ -925,6 +926,8 @@ button,
 }
 
 .main-section__wrapper p {
+  position: relative;
+  top: -17px;
   margin: 0;
   margin-bottom: 15px;
   font-size: 20px;
@@ -936,9 +939,9 @@ button,
 .travelling__wrapper {
   width: 84.9%;
   max-width: 1160px;
-  min-height: 566px;
+  min-height: 576px;
   margin: 0 auto;
-  padding: 120px 0 30px 0;
+  padding: 130px 0 30px 0;
 }
 
 .travelling__wrapper picture {
@@ -965,6 +968,7 @@ button,
 
 .travelling__article {
   width: clamp(300px, 44.5%, 513px);
+  margin-top: 20px;
   margin-right: 40px;
 }
 
@@ -977,6 +981,8 @@ button,
 }
 
 .travelling__article p {
+  position: relative;
+  top: -15px;
   margin: 0;
   margin-bottom: 10px;
 }
@@ -1032,7 +1038,7 @@ button,
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: 114px;
-  margin-top: 11px;
+  margin-top: 10px;
   margin-right: 1px;
 }
 
@@ -1050,6 +1056,18 @@ button,
   opacity: 0.6;
 }
 
+.social-list__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.social-list__link svg {
+  display: block;
+  margin: auto;
+  margin-right: 0;
+}
+
 .footer-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1064,7 +1082,7 @@ button,
   align-items: center;
   width: 70%;
   margin-left: 40px;
-  margin-top: 8px;
+  margin-top: 4px;
   margin-right: auto;
 }
 
@@ -1099,13 +1117,13 @@ button,
   max-width: 1160px;
   min-height: 562px;
   margin: 0 auto;
-  padding: 120px 0 30px 0;
+  padding: 110px 0 30px 0;
 }
 
 .advantages__wrapper h2 {
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   font-size: 28px;
   line-height: 42px;
   font-weight: 600;
@@ -1125,13 +1143,17 @@ button,
   background-color: #f9fbfd;
 }
 
+.advantages-list__item br {
+  display: none;
+}
+
 .advantages-list__item svg {
-  margin-bottom: 25px;
+  margin-bottom: 13px;
 }
 
 .advantages-list__item h3 {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
   font-size: 18px;
   line-height: 25px;
   font-weight: 500;
@@ -1139,7 +1161,7 @@ button,
 
 .advantages-list__item p {
   margin: 0;
-  margin-top: 10px;
+  margin-top: 8px;
   font-size: 14px;
   line-height: 20px;
 }
@@ -1159,37 +1181,42 @@ button,
   min-height: 546px;
   margin: 0 auto;
   padding: 120px 0;
+  padding-bottom: 90px;
 }
 
 .contacts__map {
   width: clamp(100px, 48.4%, 560px);
-  min-height: 306px;
-  background-image: url("../img/map-desktop@1x.png");
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size: cover;
-  background-color: #e9e7e1;
-  aspect-ratio: 1.83/1;
+}
+
+.contacts__map img {
+  width: 100%;
+  height: auto;
 }
 
 .contacts__map[data-map-state=with-js] {
+  min-height: 306px;
   aspect-ratio: initial;
+}
+
+.contacts__map[data-map-state=with-js] img {
+  display: none;
 }
 
 .contacts__info {
   width: clamp(100px, 43.1%, 500px);
-  margin-top: 81px;
+  margin-top: 10px;
 }
 
 .contacts__subtitle {
   margin: 0 auto;
-  margin-bottom: 45px;
+  margin-bottom: 25px;
   font-size: 18px;
   line-height: 27px;
   font-weight: 500;
 }
 
 .contacts__contact {
+  position: relative;
   margin: 0 auto;
   margin-bottom: 25px;
   padding: 5px 0;
@@ -1204,6 +1231,8 @@ button,
 }
 
 .contacts__contact--tel {
+  position: relative;
+  top: -13px;
   background-size: 18px 18px;
   background-image: url("../img/svg/cell-phone.svg");
 }
@@ -1217,13 +1246,13 @@ button,
   max-width: 1160px;
   min-height: 300px;
   margin: 0 auto;
-  padding: 95px 15px 120px 15px;
+  padding: 85px 15px 117px 15px;
 }
 
 .cruises__wrapper h2 {
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 60px;
+  margin-bottom: 49px;
   font-size: 28px;
   line-height: 42px;
   font-weight: 600;
@@ -1274,6 +1303,7 @@ button,
   -ms-flex-align: start;
   align-items: flex-start;
   padding: 30px;
+  padding-bottom: 24px;
   background-color: #9dcafb;
   background-repeat: no-repeat;
   background-position: 50% 0;
@@ -1324,13 +1354,14 @@ button,
   z-index: -1;
   height: 100%;
   padding: 35px 25px;
+  padding-top: 29px;
   background-color: #011c40;
   overflow: auto;
 }
 
 .cruise-card__info-subtitle {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 13px;
   font-size: 18px;
   line-height: 27px;
   font-weight: 500;
@@ -1347,20 +1378,20 @@ button,
 
 .cruise-card__paragraph-text {
   margin: 0;
-  margin-top: 10px;
+  margin-top: 1px;
   font-size: 14px;
   line-height: 20px;
   color: #d8d8d9;
 }
 
 .cruise-card__paragraph {
-  margin-bottom: 20px;
+  margin-bottom: 11px;
 }
 
 .cruise-card__link {
   display: block;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 25px;
   padding: 9.5px 10px;
   font-size: 14px;
   line-height: 21px;
@@ -1403,7 +1434,7 @@ button,
 
 .form-section__wrapper h2 {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   font-size: 40px;
   line-height: 60px;
   font-weight: 700;
@@ -1424,6 +1455,7 @@ button,
 .form {
   width: 403px;
   padding: 50px;
+  padding-top: 42px;
   background-color: #011c40;
   -webkit-box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
   box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
@@ -1432,7 +1464,7 @@ button,
 .form__text {
   width: 100%;
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 28px;
   font-size: 18px;
   line-height: 27px;
   font-weight: 500;
@@ -1498,7 +1530,7 @@ button,
 .form__submit-button {
   width: 100%;
   min-height: 43px;
-  margin-top: 20px;
+  margin-top: 18px;
   padding: 10px;
   font-size: 14px;
   line-height: 21px;
@@ -1524,7 +1556,7 @@ button,
 }
 
 .custom-checkbox {
-  margin-top: 5px;
+  margin-top: 24px;
   margin-bottom: 10px;
 }
 
@@ -1554,7 +1586,7 @@ button,
 
 .custom-checkbox__mark {
   position: relative;
-  top: -2.5px;
+  top: -3px;
   display: block;
   min-width: 18px;
   height: 18px;
@@ -1574,7 +1606,7 @@ button,
   bottom: 0;
   right: 0;
   background-image: url("../img/svg/done.svg");
-  background-position: top 6px left 4px;
+  background-position: top 5px left 3px;
   background-repeat: no-repeat;
 }
 
@@ -1629,13 +1661,15 @@ button,
   }
 }
 
+@media (max-width: 3000px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 3000px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 3000px) and (min-resolution: 144dpi), (max-width: 3000px) and (min-resolution: 1.5dppx) {
+  .form-section {
+    background-image: url("../img/form-image@2x.jpg");
+  }
+}
+
 @media (max-width: 2000px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 2000px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 2000px) and (min-resolution: 144dpi), (max-width: 2000px) and (min-resolution: 1.5dppx) {
   .main-section {
     background-image: url("../img/main-image@2x.jpg");
-  }
-
-  .contacts__map {
-    background-image: url("../img/map-desktop@2x.png");
   }
 }
 
@@ -1693,12 +1727,15 @@ button,
   }
 
   .main-section__wrapper h1 {
-    margin-bottom: 29px;
+    position: relative;
+    top: -35px;
+    margin-bottom: 0;
     font-size: 50px;
     line-height: 61px;
   }
 
   .main-section__wrapper p {
+    top: -23px;
     font-size: 18px;
     line-height: 22px;
   }
@@ -1706,8 +1743,8 @@ button,
   .travelling__wrapper {
     min-width: 678px;
     width: 88.3%;
-    min-height: 464px;
-    padding-top: 100px;
+    min-height: 474px;
+    padding-top: 110px;
   }
 
   .travelling__wrapper picture {
@@ -1728,6 +1765,7 @@ button,
 
   .travelling__article h2 {
     width: clamp(205px, 30.2%, 500px);
+    margin-top: -28px;
     margin-bottom: 30px;
     font-size: 26px;
     line-height: 36px;
@@ -1747,7 +1785,7 @@ button,
   .social-list {
     width: 96px;
     margin-top: 2px;
-    margin-right: 0;
+    margin-right: -4px;
   }
 
   .social-list__item:not(:nth-child(3n)) {
@@ -1759,10 +1797,15 @@ button,
     height: 16px;
   }
 
+  .social-list__link svg {
+    width: 16px;
+    height: 16px;
+  }
+
   .footer-list {
     width: 70%;
-    margin-left: 25px;
-    margin-top: 2px;
+    margin-left: 26px;
+    margin-top: 0;
   }
 
   .footer-list__item:not(:last-child) {
@@ -1779,7 +1822,7 @@ button,
     min-width: 678px;
     width: 88.3%;
     min-height: 588px;
-    padding-top: 100px;
+    padding-top: 90px;
   }
 
   .advantages__wrapper h2 {
@@ -1793,11 +1836,30 @@ button,
 
   .advantages-list__item {
     min-height: 310px;
-    padding: 26px 16px 25px 20px;
+    padding: 26px 16px 21px 20px;
+  }
+
+  .advantages-list__item br {
+    display: inline;
   }
 
   .advantages-list__item svg {
-    margin-bottom: 24px;
+    margin-bottom: 11px;
+  }
+
+  .advantages-list__item--ship svg {
+    width: 21px;
+    height: 26px;
+  }
+
+  .advantages-list__item--system svg {
+    width: 27px;
+    height: 26px;
+  }
+
+  .advantages-list__item--tours svg {
+    width: 36px;
+    height: 26px;
   }
 
   .contacts__wrapper {
@@ -1807,20 +1869,29 @@ button,
     padding: 100px 0;
   }
 
+  .contacts__map img {
+    aspect-ratio: 1/1.03;
+  }
+
+  .contacts__map img {
+    aspect-ratio: 1/1.09;
+  }
+
   .contacts__map {
     width: clamp(324px, 47.8%, 500px);
+  }
+
+  .contacts__map[data-map-state=with-js] {
     min-height: 335px;
-    background-image: url("../img/map-tablet@1x.png");
-    aspect-ratio: 1/1.03;
   }
 
   .contacts__info {
     width: clamp(324px, 47.8%, 500px);
-    margin-top: 72px;
+    margin-top: 32px;
   }
 
   .contacts__subtitle {
-    margin-bottom: 40px;
+    margin-bottom: 31px;
   }
 
   .contacts__contact {
@@ -1830,10 +1901,19 @@ button,
     background-position: top 0 left 0;
   }
 
+  .contacts__contact--adress {
+    line-height: 20px;
+  }
+
+  .contacts__contact--tel {
+    top: -5px;
+    line-height: 20px;
+  }
+
   .cruises__wrapper {
     min-width: 678px;
     width: 88.3%;
-    padding: 100px 15px 100px 15px;
+    padding: 90px 15px 98px 15px;
   }
 
   .cruises__wrapper h2 {
@@ -1852,10 +1932,17 @@ button,
 
   .cruise-card__cover {
     padding: 35px;
+    padding-bottom: 26px;
   }
 
   .cruise-card__info {
     padding: 35px;
+    padding-top: 29px;
+  }
+
+  .form-section {
+    background-position: 70% 10%;
+    background-image: url("../img/form-image-tablet@1x.jpg");
   }
 
   .form-section__wrapper {
@@ -1868,11 +1955,12 @@ button,
     align-items: center;
     min-width: 678px;
     width: 88.3%;
-    padding: 100px 129px;
+    padding: 89px 129px;
+    padding-bottom: 98px;
   }
 
   .form-section__wrapper h2 {
-    margin-bottom: 25px;
+    margin-bottom: 5px;
     font-size: 34px;
     line-height: 51px;
     text-align: center;
@@ -1882,7 +1970,7 @@ button,
     display: block;
     width: 84%;
     margin: 0 auto;
-    margin-bottom: 60px;
+    margin-bottom: 51px;
     text-align: center;
   }
 
@@ -1892,6 +1980,7 @@ button,
 
   .form {
     width: 96.1%;
+    padding-top: 44px;
   }
 }
 
@@ -1900,8 +1989,8 @@ button,
     background-image: url("../img/main-image-tablet@2x.jpg");
   }
 
-  .contacts__map {
-    background-image: url("../img/map-tablet@2x.png");
+  .form-section {
+    background-image: url("../img/form-image-tablet@2x.jpg");
   }
 }
 
@@ -2018,7 +2107,7 @@ button,
   .main-header__toggler[data-header-state=open] {
     position: absolute;
     top: 25px;
-    right: 4.7%;
+    right: 3.8%;
     background-image: url("../img/svg/cross.svg");
   }
 
@@ -2092,13 +2181,14 @@ button,
   }
 
   .main-section__wrapper h1 {
-    margin-top: -27px;
+    margin-top: 41px;
     margin-bottom: 13px;
     font-size: 36px;
     line-height: 45px;
   }
 
   .main-section__wrapper p {
+    top: -37px;
     width: 80%;
     font-size: 16px;
     line-height: 22px;
@@ -2107,8 +2197,8 @@ button,
   .travelling__wrapper {
     min-width: 290px;
     width: 90.62%;
-    min-height: 640px;
-    padding-top: 65px;
+    min-height: 650px;
+    padding-top: 75px;
   }
 
   .travelling__wrapper picture {
@@ -2135,7 +2225,7 @@ button,
   }
 
   .travelling__article p {
-    margin-bottom: 50px;
+    margin-bottom: 28px;
   }
 
   .main-footer__wrapper {
@@ -2152,22 +2242,24 @@ button,
   .main-footer__logo-link {
     width: 42px;
     height: 22px;
-    margin-bottom: 27px;
+    margin-bottom: 26px;
   }
 
   .social-list {
+    position: relative;
+    left: -3px;
     width: 195px;
     margin: 0;
   }
 
   .social-list__item:not(:nth-child(5n)) {
-    margin-right: 22px;
+    margin-right: 20px;
   }
 
   .footer-list {
     width: 100%;
     margin: 0;
-    margin-bottom: 27px;
+    margin-bottom: 23px;
   }
 
   .footer-list__item {
@@ -2176,13 +2268,13 @@ button,
 
   .footer-list__item:not(:last-child) {
     margin-right: 0;
-    margin-bottom: 17px;
+    margin-bottom: 11px;
   }
 
   .footer-list__link {
     width: 100%;
     padding: 3px 0;
-    font-size: 11px;
+    font-size: 12px;
     line-height: 15px;
   }
 
@@ -2190,11 +2282,12 @@ button,
     min-width: 290px;
     width: 90.62%;
     min-height: 997px;
-    padding-top: 65px;
+    padding-top: 57px;
     padding-bottom: 65px;
   }
 
   .advantages__wrapper h2 {
+    margin-bottom: 30px;
     font-size: 24px;
     line-height: 36px;
   }
@@ -2206,11 +2299,11 @@ button,
 
   .advantages-list__item {
     min-height: 250px;
-    padding: 25px 15px 25px 20px;
+    padding: 25px 15px 23px 20px;
   }
 
   .advantages-list__item svg {
-    margin-bottom: 25px;
+    margin-bottom: 11px;
   }
 
   .contacts__wrapper {
@@ -2221,15 +2314,16 @@ button,
     min-width: 290px;
     width: 90.62%;
     min-height: 703px;
-    padding-top: 65px;
-    padding-bottom: 65px;
+    padding-top: 58px;
+    padding-bottom: 40px;
   }
 
   .contacts__map {
     width: 100%;
+  }
+
+  .contacts__map[data-map-state=with-js] {
     min-height: 316px;
-    background-image: url("../img/map-mobile@1x.png");
-    aspect-ratio: 1/1.08;
   }
 
   .contacts__info {
@@ -2245,11 +2339,11 @@ button,
   .cruises__wrapper {
     min-width: 290px;
     width: 90.62%;
-    padding: 65px 10px 65px 10px;
+    padding: 55px 10px 65px 10px;
   }
 
   .cruises__wrapper h2 {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-size: 24px;
     line-height: 36px;
   }
@@ -2265,29 +2359,37 @@ button,
 
   .cruise-card__cover {
     padding: 25px;
+    padding-bottom: 17px;
   }
 
   .cruise-card__info {
     padding: 35px 25px;
+    padding-top: 30px;
+  }
+
+  .form-section {
+    background-position: 55% 10%;
+    background-image: url("../img/form-image-mobile@1x.jpg");
   }
 
   .form-section__wrapper {
     min-width: 290px;
     width: 90.62%;
-    padding: 65px 0;
+    padding: 59px 0;
+    padding-bottom: 64px;
   }
 
   .form-section__wrapper h2 {
     display: block;
     width: 66.9%;
-    margin: 0 auto 25px auto;
+    margin: 0 auto 15px auto;
     font-size: 24px;
     line-height: 31px;
   }
 
   .form-section__text {
     width: 88.6%;
-    margin-bottom: 40px;
+    margin-bottom: 33px;
     font-size: 16px;
     line-height: 22px;
   }
@@ -2295,12 +2397,13 @@ button,
   .form {
     width: 100%;
     padding: 40px 30px;
+    padding-top: 35px;
   }
 
   .form__text {
     display: block;
     width: 93%;
-    margin: 0 auto 35px auto;
+    margin: 0 auto 28px auto;
     line-height: 25px;
     text-align: center;
   }
@@ -2308,6 +2411,7 @@ button,
   .custom-checkbox {
     width: 78.3%;
     margin-top: 0;
+    margin-bottom: 9px;
   }
 
   .custom-checkbox__label {
@@ -2334,8 +2438,8 @@ button,
     background-image: url("../img/main-image-mobile@2x.jpg");
   }
 
-  .contacts__map {
-    background-image: url("../img/map-mobile@2x.png");
+  .form-section {
+    background-image: url("../img/form-image-mobile@2x.jpg");
   }
 }
 
@@ -2418,9 +2522,5 @@ button,
 
   .cruise-card__cover--minion {
     background-image: url("../img/catalog/cruise-minion@2x.jpg");
-  }
-
-  .form-section {
-    background-image: url("../img/form-image@2x.jpg");
   }
 }

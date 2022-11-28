@@ -31,6 +31,7 @@
   justify-content: end;
   align-items: flex-start;
   padding: 30px;
+  padding-bottom: 24px;
   background-color: #9dcafb;
   background-repeat: no-repeat;
   background-position: 50% 0;
@@ -38,10 +39,12 @@
 
   @include vp-1023 {
     padding: 35px;
+    padding-bottom: 26px;
   }
 
   @include vp-767 {
     padding: 25px;
+    padding-bottom: 17px;
   }
 
   &--astoria {
@@ -121,21 +124,24 @@
   z-index: -1;
   height: 100%;
   padding: 35px 25px;
+  padding-top: 29px;
   background-color: $color-default-black;
   overflow: auto;
 
   @include vp-1023 {
     padding: 35px;
+    padding-top: 29px;
   }
 
   @include vp-767 {
     padding: 35px 25px;
+    padding-top: 30px;
   }
 }
 
 .cruise-card__info-subtitle {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 13px;
   font-size: 18px;
   line-height: 27px;
   font-weight: 500;
@@ -152,20 +158,20 @@
 
 .cruise-card__paragraph-text {
   margin: 0;
-  margin-top: 10px;
+  margin-top: 1px;
   font-size: 14px;
   line-height: 20px;
   color: #d8d8d9;
 }
 
 .cruise-card__paragraph {
-  margin-bottom: 20px;
+  margin-bottom: 11px;
 }
 
 .cruise-card__link {
   display: block;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 25px;
   padding: 9.5px 10px;
   font-size: 14px;
   line-height: 21px;

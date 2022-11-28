@@ -3,24 +3,24 @@
   max-width: $vr-1160;
   min-height: 300px;
   margin: 0 auto;
-  padding: 95px 15px 120px 15px;
+  padding: 85px 15px 117px 15px;
 
   @include vp-1023 {
     min-width: $vr-678;
     width: 88.3%;
-    padding: 100px 15px 100px 15px;
+    padding: 90px 15px 98px 15px;
   }
 
   @include vp-767 {
     min-width: $vr-290;
     width: 90.62%;
-    padding: 65px 10px 65px 10px;
+    padding: 55px 10px 65px 10px;
   }
 
   h2 {
     text-align: center;
     margin: 0 auto;
-    margin-bottom: 60px;
+    margin-bottom: 49px;
     font-size: 28px;
     line-height: 42px;
     font-weight: 600;
@@ -31,7 +31,7 @@
     }
 
     @include vp-767 {
-      margin-bottom: 40px;
+      margin-bottom: 30px;
       font-size: 24px;
       line-height: 36px;
     }

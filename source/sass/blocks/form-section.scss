@@ -5,12 +5,33 @@
   background-position: 50% 0;
   background-size: cover;
 
-  @include retina {
-    background-image: url("../img/form-image@2x.jpg");
+
+  @media (max-width: 3000px) {
+    @include retina {
+      background-image: url("../img/form-image@2x.jpg");
+    }
   }
 
   @media (min-width: 1366px) {
     aspect-ratio: 2.46 / 1;
+  }
+
+  @include vp-1023 {
+    background-position: 70% 10%;
+    background-image: url("../img/form-image-tablet@1x.jpg");
+
+    @include retina {
+      background-image: url("../img/form-image-tablet@2x.jpg");
+    }
+  }
+
+  @include vp-767 {
+    background-position: 55% 10%;
+    background-image: url("../img/form-image-mobile@1x.jpg");
+
+    @include retina {
+      background-image: url("../img/form-image-mobile@2x.jpg");
+    }
   }
 }
 
@@ -33,24 +54,26 @@
     align-items: center;
     min-width: $vr-678;
     width: 88.3%;
-    padding: 100px 129px;
+    padding: 89px 129px;
+    padding-bottom: 98px;
   }
 
   @include vp-767 {
     min-width: $vr-290;
     width: 90.62%;
-    padding: 65px 0;
+    padding: 59px 0;
+    padding-bottom: 64px;
   }
 
   h2 {
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     font-size: 40px;
     line-height: 60px;
     font-weight: 700;
 
     @include vp-1023 {
-      margin-bottom: 25px;
+      margin-bottom: 5px;
       font-size: 34px;
       line-height: 51px;
       text-align: center;
@@ -59,7 +82,7 @@
     @include vp-767 {
       display: block;
       width: 66.9%;
-      margin: 0 auto 25px auto;
+      margin: 0 auto 15px auto;
       font-size: 24px;
       line-height: 31px;
     }
@@ -77,13 +100,13 @@
     display: block;
     width: 84%;
     margin: 0 auto;
-    margin-bottom: 60px;
+    margin-bottom: 51px;
     text-align: center;
   }
 
   @include vp-767 {
     width: 88.6%;
-    margin-bottom: 40px;
+    margin-bottom: 33px;
     font-size: 16px;
     line-height: 22px;
   }

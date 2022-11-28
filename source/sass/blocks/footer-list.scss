@@ -5,19 +5,19 @@
   align-items: center;
   width: 70%;
   margin-left: 40px;
-  margin-top: 8px;
+  margin-top: 4px;
   margin-right: auto;
 
   @include vp-1023 {
     width: 70%;
-    margin-left: 25px;
-    margin-top: 2px;
+    margin-left: 26px;
+    margin-top: 0;
   }
 
   @include vp-767 {
     width: 100%;
     margin: 0;
-    margin-bottom: 27px;
+    margin-bottom: 23px;
   }
 }
 
@@ -35,7 +35,7 @@
 
     @include vp-767 {
       margin-right: 0;
-      margin-bottom: 17px;
+      margin-bottom: 11px;
     }
   }
 }
@@ -58,7 +58,7 @@
   @include vp-767 {
     width: 100%;
     padding: 3px 0;
-    font-size: 11px;
+    font-size: 12px;
     line-height: 15px;
   }
 

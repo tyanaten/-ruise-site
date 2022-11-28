@@ -1,23 +1,26 @@
 .form {
   width: 403px;
   padding: 50px;
+  padding-top: 42px;
   background-color: $color-default-black;
   box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
 
   @include vp-1023 {
     width: 96.1%;
+    padding-top: 44px;
   }
 
   @include vp-767 {
     width: 100%;
     padding: 40px 30px;
+    padding-top: 35px;
   }
 }
 
 .form__text {
   width: 100%;
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 28px;
   font-size: 18px;
   line-height: 27px;
   font-weight: 500;
@@ -27,7 +30,7 @@
   @include vp-767 {
     display: block;
     width: 93%;
-    margin: 0 auto 35px auto;
+    margin: 0 auto 28px auto;
     line-height: 25px;
     text-align: center;
   }
@@ -67,7 +70,7 @@
 .form__submit-button {
   width: 100%;
   min-height: 43px;
-  margin-top: 20px;
+  margin-top: 18px;
   padding: 10px;
   font-size: 14px;
   line-height: 21px;
