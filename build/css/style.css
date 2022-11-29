@@ -662,6 +662,7 @@ button,
   display: -ms-inline-flexbox;
   display: inline-flex;
   padding: 10px 20px;
+  vertical-align: middle;
   color: #f9fbfd;
   background-color: #2c39f2;
   border: none;
@@ -1277,7 +1278,7 @@ button,
   z-index: 10;
 }
 
-.cruise-card__cover,
+.cruise-card__cover-title,
 .cruise-card__info {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -1287,67 +1288,62 @@ button,
   grid-row: 1/2;
 }
 
-.cruise-card__cover {
+.cruise-card__cover-title {
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: end;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  width: 100%;
+  height: 100%;
+  margin: 0;
   padding: 30px;
   padding-bottom: 24px;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  color: #f9fbfd;
   background-color: #9dcafb;
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: cover;
 }
 
-.cruise-card__cover--astoria {
+.cruise-card__cover-title--astoria {
   background-image: url("../img/catalog/cruise-astoria@1x.jpg");
 }
 
-.cruise-card__cover--elaine {
+.cruise-card__cover-title--elaine {
   background-image: url("../img/catalog/cruise-olympia@1x.jpg");
 }
 
-.cruise-card__cover--atlantis {
+.cruise-card__cover-title--atlantis {
   background-image: url("../img/catalog/cruise-atlantis@1x.jpg");
 }
 
-.cruise-card__cover--odysseus {
+.cruise-card__cover-title--odysseus {
   background-image: url("../img/catalog/cruise-odysseus@1x.jpg");
 }
 
-.cruise-card__cover--olympia {
+.cruise-card__cover-title--olympia {
   background-image: url("../img/catalog/cruise-olympia@1x.jpg");
 }
 
-.cruise-card__cover--aurora {
+.cruise-card__cover-title--aurora {
   background-image: url("../img/catalog/cruise-aurora@1x.jpg");
 }
 
-.cruise-card__cover--leonor {
+.cruise-card__cover-title--leonor {
   background-image: url("../img/catalog/cruise-leonor@1x.jpg");
 }
 
-.cruise-card__cover--minion {
+.cruise-card__cover-title--minion {
   background-image: url("../img/catalog/cruise-minion@1x.jpg");
-}
-
-.cruise-card__cover h3 {
-  margin: 0;
-  font-size: 18px;
-  line-height: 27px;
-  font-weight: 500;
-  color: #f9fbfd;
 }
 
 .cruise-card__info {
@@ -1930,7 +1926,7 @@ button,
     aspect-ratio: 1/1.25;
   }
 
-  .cruise-card__cover {
+  .cruise-card__cover-title {
     padding: 35px;
     padding-bottom: 26px;
   }
@@ -2242,7 +2238,7 @@ button,
   .main-footer__logo-link {
     width: 42px;
     height: 22px;
-    margin-bottom: 26px;
+    margin-bottom: 24px;
   }
 
   .social-list {
@@ -2259,7 +2255,7 @@ button,
   .footer-list {
     width: 100%;
     margin: 0;
-    margin-bottom: 23px;
+    margin-bottom: 24px;
   }
 
   .footer-list__item {
@@ -2357,7 +2353,7 @@ button,
     aspect-ratio: 1/1.43;
   }
 
-  .cruise-card__cover {
+  .cruise-card__cover-title {
     padding: 25px;
     padding-bottom: 17px;
   }
@@ -2492,35 +2488,35 @@ button,
     background-image: url("../img/benefits-background@2x.jpg");
   }
 
-  .cruise-card__cover--astoria {
+  .cruise-card__cover-title--astoria {
     background-image: url("../img/catalog/cruise-astoria@2x.jpg");
   }
 
-  .cruise-card__cover--elaine {
+  .cruise-card__cover-title--elaine {
     background-image: url("../img/catalog/cruise-olympia@2x.jpg");
   }
 
-  .cruise-card__cover--atlantis {
+  .cruise-card__cover-title--atlantis {
     background-image: url("../img/catalog/cruise-atlantis@2x.jpg");
   }
 
-  .cruise-card__cover--odysseus {
+  .cruise-card__cover-title--odysseus {
     background-image: url("../img/catalog/cruise-odysseus@2x.jpg");
   }
 
-  .cruise-card__cover--olympia {
+  .cruise-card__cover-title--olympia {
     background-image: url("../img/catalog/cruise-olympia@2x.jpg");
   }
 
-  .cruise-card__cover--aurora {
+  .cruise-card__cover-title--aurora {
     background-image: url("../img/catalog/cruise-aurora@2x.jpg");
   }
 
-  .cruise-card__cover--leonor {
+  .cruise-card__cover-title--leonor {
     background-image: url("../img/catalog/cruise-leonor@2x.jpg");
   }
 
-  .cruise-card__cover--minion {
+  .cruise-card__cover-title--minion {
     background-image: url("../img/catalog/cruise-minion@2x.jpg");
   }
 }

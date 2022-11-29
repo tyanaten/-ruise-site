@@ -18,20 +18,26 @@
   }
 }
 
-.cruise-card__cover,
+.cruise-card__cover-title,
 .cruise-card__info {
   grid-column: 1/2;
   grid-row: 1/2;
 }
 
-.cruise-card__cover {
+.cruise-card__cover-title {
   z-index: 1;
   display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: flex-start;
+  align-items: flex-end;
+  justify-content: start;
+  width: 100%;
+  height: 100%;
+  margin: 0;
   padding: 30px;
   padding-bottom: 24px;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  color: $color-default-white;
   background-color: #9dcafb;
   background-repeat: no-repeat;
   background-position: 50% 0;
@@ -109,14 +115,6 @@
     @include retina {
       background-image: url("../img/catalog/cruise-minion@2x.jpg");
     }
-  }
-
-  h3 {
-    margin: 0;
-    font-size: 18px;
-    line-height: 27px;
-    font-weight: 500;
-    color: $color-default-white;
   }
 }
 

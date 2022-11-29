@@ -20,7 +20,7 @@ ymaps.ready(function () {
     balloonContent: 'г. Санкт Петербург, ул. Большая Конюшенная, 19/8',
   }, {
     iconLayout: 'default#image',
-    iconImageHref: '../img/sprite/map-pin.svg',
+    iconImageHref: './img/sprite/map-pin.svg',
     iconImageSize: [18, 22],
     iconImageOffset: [-9, -22],
   });
