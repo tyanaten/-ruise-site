@@ -8,15 +8,30 @@ const changedHeaderElements = document.querySelectorAll('[data-header-state="no-
 
 const menu = document.querySelector('.main-header__wrapper');
 
+const breakpoint = window.matchMedia('(min-width:768px)');
+
 const setHeaderState = (state) => {
   changedHeaderElements.forEach((element) => {
     element.setAttribute('data-header-state', state);
   });
 };
 
+const breakpointChecker = () => {
+  if (breakpoint.matches) {
+    setHeaderState(CLOSE_STATE);
+  }
+};
+
+breakpoint.addListener(breakpointChecker);
+breakpointChecker();
+
 scrollButtons.forEach((button) => {
   button.addEventListener('click', (evt) => {
     evt.preventDefault();
+
+    if (menu.getAttribute('data-header-state') === 'open') {
+      setHeaderState(CLOSE_STATE);
+    }
 
     let scrollView = document.querySelector(button.getAttribute('data-sroll-view'));
     scrollView.scrollIntoView({

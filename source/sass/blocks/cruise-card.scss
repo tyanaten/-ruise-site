@@ -16,6 +16,12 @@
   @include vp-767 {
     aspect-ratio: 1 / 1.43;
   }
+
+  &:focus-within {
+    .cruise-card__info {
+      z-index: 10;
+    }
+  }
 }
 
 .cruise-card__cover-title,
@@ -56,70 +62,152 @@
   &--astoria {
     background-image: url("../img/catalog/cruise-astoria@1x.jpg");
 
+    @include vp-767 {
+      background-image: url("../img/catalog/cruise-astoria-mobile@1x.jpg");
+    }
+
     @include retina {
-      background-image: url("../img/catalog/cruise-astoria@2x.jpg");
+      @media (min-width: ($vp-768)) {
+        background-image: url("../img/catalog/cruise-astoria@2x.jpg");
+      }
+
+      @include vp-767 {
+        background-image: url("../img/catalog/cruise-astoria-mobile@2x.jpg");
+      }
     }
   }
 
   &--elaine {
     background-image: url("../img/catalog/cruise-olympia@1x.jpg");
 
+    @include vp-767 {
+      background-image: url("../img/catalog/cruise-olympia-mobile@1x.jpg");
+    }
+
     @include retina {
-      background-image: url("../img/catalog/cruise-olympia@2x.jpg");
+      @media (min-width: ($vp-768)) {
+        background-image: url("../img/catalog/cruise-olympia@2x.jpg");
+      }
+
+      @include vp-767 {
+        background-image: url("../img/catalog/cruise-olympia-mobile@2x.jpg");
+      }
     }
   }
 
   &--atlantis {
     background-image: url("../img/catalog/cruise-atlantis@1x.jpg");
 
+    @include vp-767 {
+      background-image: url("../img/catalog/cruise-atlantis-mobile@1x.jpg");
+    }
+
     @include retina {
-      background-image: url("../img/catalog/cruise-atlantis@2x.jpg");
+      @media (min-width: ($vp-768)) {
+        background-image: url("../img/catalog/cruise-atlantis@2x.jpg");
+      }
+
+      @include vp-767 {
+        background-image: url("../img/catalog/cruise-atlantis-mobile@2x.jpg");
+      }
     }
   }
 
   &--odysseus {
     background-image: url("../img/catalog/cruise-odysseus@1x.jpg");
 
+    @include vp-767 {
+      background-image: url("../img/catalog/cruise-odysseus-mobile@1x.jpg");
+    }
+
     @include retina {
-      background-image: url("../img/catalog/cruise-odysseus@2x.jpg");
+      @media (min-width: ($vp-768)) {
+        background-image: url("../img/catalog/cruise-odysseus@2x.jpg");
+      }
+
+      @include vp-767 {
+        background-image: url("../img/catalog/cruise-odysseus-mobile@2x.jpg");
+      }
     }
   }
 
   &--olympia {
     background-image: url("../img/catalog/cruise-olympia@1x.jpg");
 
+    @include vp-767 {
+      background-image: url("../img/catalog/cruise-odysseus-mobile@1x.jpg");
+    }
+
     @include retina {
-      background-image: url("../img/catalog/cruise-olympia@2x.jpg");
+      @media (min-width: ($vp-768)) {
+        background-image: url("../img/catalog/cruise-olympia-mobile@1x.jpg");
+      }
+
+      @include vp-767 {
+        background-image: url("../img/catalog/cruise-olympia-mobile@2x.jpg");
+      }
     }
   }
 
   &--aurora {
     background-image: url("../img/catalog/cruise-aurora@1x.jpg");
 
+    @include vp-767 {
+      background-image: url("../img/catalog/cruise-aurora-mobile@1x.jpg");
+    }
+
     @include retina {
-      background-image: url("../img/catalog/cruise-aurora@2x.jpg");
+      @media (min-width: ($vp-768)) {
+        background-image: url("../img/catalog/cruise-aurora@2x.jpg");
+      }
+
+      @include vp-767 {
+        background-image: url("../img/catalog/cruise-aurora-mobile@2x.jpg");
+      }
     }
   }
 
   &--leonor {
     background-image: url("../img/catalog/cruise-leonor@1x.jpg");
 
+    @include vp-767 {
+      background-image: url("../img/catalog/cruise-leonor-mobile@1x.jpg");
+    }
+
     @include retina {
-      background-image: url("../img/catalog/cruise-leonor@2x.jpg");
+      @media (min-width: ($vp-768)) {
+        background-image: url("../img/catalog/cruise-leonor@2x.jpg");
+      }
+
+      @include vp-767 {
+        background-image: url("../img/catalog/cruise-leonor-mobile@2x.jpg");
+      }
     }
   }
 
   &--minion {
     background-image: url("../img/catalog/cruise-minion@1x.jpg");
 
+    @include vp-767 {
+      background-image: url("../img/catalog/cruise-minion-mobile@1x.jpg");
+    }
+
     @include retina {
-      background-image: url("../img/catalog/cruise-minion@2x.jpg");
+      @media (min-width: ($vp-768)) {
+        background-image: url("../img/catalog/cruise-minion@2x.jpg");
+      }
+
+      @include vp-767 {
+        background-image: url("../img/catalog/cruise-minion-mobile@2x.jpg");
+      }
     }
   }
 }
 
 .cruise-card__info {
   z-index: -1;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   padding: 35px 25px;
   padding-top: 29px;
@@ -169,7 +257,7 @@
 .cruise-card__link {
   display: block;
   width: 100%;
-  margin-top: 25px;
+  margin-top: auto;
   padding: 9.5px 10px;
   font-size: 14px;
   line-height: 21px;

@@ -22,10 +22,12 @@
   picture {
     display: block;
     width: clamp(300px, 48.3%, 560px);
+    margin-bottom: auto;
 
     @include vp-1023 {
       width: clamp(300px, 48.5%, 560px);
       padding-right: 5px;
+      margin-bottom: 0;
     }
 
     @include vp-767 {

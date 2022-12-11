@@ -8,6 +8,17 @@
   &[data-header-state="open"] {
     max-height: 100vh;
     overflow: hidden;
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 43, 102, 0.5);
+    }
   }
 
   &[data-header-state="closed"] {
@@ -26,6 +37,10 @@
   main {
     flex-grow: 1;
   }
+}
+
+.overlay {
+  display: none;
 }
 
 .rouble {

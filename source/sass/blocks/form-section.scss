@@ -5,7 +5,6 @@
   background-position: 50% 0;
   background-size: cover;
 
-
   @media (max-width: 3000px) {
     @include retina {
       background-image: url("../img/form-image@2x.jpg");
