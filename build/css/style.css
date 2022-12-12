@@ -813,8 +813,14 @@ button,
 }
 
 .main-header {
-  position: relative;
-  z-index: 10;
+  min-height: 650px;
+  background-color: #00417f;
+  background-image: url("../img/main-image@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  -webkit-filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .main-header__wrapper {
@@ -832,6 +838,7 @@ button,
   max-width: 1160px;
   min-height: 38px;
   margin: 0 auto;
+  margin-bottom: 181px;
   padding-top: 35px;
 }
 
@@ -861,9 +868,6 @@ button,
 }
 
 .nav-list {
-  position: absolute;
-  top: 40px;
-  right: 2px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -897,21 +901,6 @@ button,
   flex-grow: 1;
 }
 
-.main-section {
-  position: relative;
-  z-index: 1;
-  top: -73px;
-  margin-bottom: -83px;
-  background-color: #00417f;
-  background-image: url("../img/main-image@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size: cover;
-  aspect-ratio: 2.1/1;
-  -webkit-filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
-  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
-}
-
 .main-section__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -927,7 +916,8 @@ button,
   max-width: 1160px;
   min-height: 90%;
   margin: 0 auto;
-  padding: 83px 50px 10px 95px;
+  padding-bottom: 230px;
+  padding-left: 95px;
 }
 
 .main-section__wrapper h1 {
@@ -955,9 +945,9 @@ button,
 .travelling__wrapper {
   width: 84.9%;
   max-width: 1160px;
-  min-height: 576px;
+  min-height: 566px;
   margin: 0 auto;
-  padding: 130px 0 30px 0;
+  padding: 120px 0 30px 0;
 }
 
 .travelling__wrapper picture {
@@ -1203,6 +1193,7 @@ button,
 
 .contacts__map {
   width: clamp(100px, 48.4%, 560px);
+  margin-bottom: auto;
 }
 
 .contacts__map img {
@@ -1477,6 +1468,8 @@ button,
 
 .form {
   width: 403px;
+  margin-bottom: auto;
+  margin-left: 25px;
   padding: 50px;
   padding-top: 42px;
   background-color: #011c40;
@@ -1692,7 +1685,7 @@ button,
   }
 
   .cruise-card__cover-title--olympia {
-    background-image: url("../img/catalog/cruise-olympia-mobile@1x.jpg");
+    background-image: url("../img/catalog/cruise-olympia@2x.jpg");
   }
 
   .cruise-card__cover-title--aurora {
@@ -1709,24 +1702,18 @@ button,
 }
 
 @media (min-width: 1366px) {
-  .form-section {
-    aspect-ratio: 2.46/1;
-  }
-
   .form-section__wrapper {
     margin: auto;
   }
 }
 
 @media (max-width: 3000px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 3000px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 3000px) and (min-resolution: 144dpi), (max-width: 3000px) and (min-resolution: 1.5dppx) {
+  .main-header {
+    background-image: url("../img/main-image@2x.jpg");
+  }
+
   .form-section {
     background-image: url("../img/form-image@2x.jpg");
-  }
-}
-
-@media (max-width: 2000px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 2000px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 2000px) and (min-resolution: 144dpi), (max-width: 2000px) and (min-resolution: 1.5dppx) {
-  .main-section {
-    background-image: url("../img/main-image@2x.jpg");
   }
 }
 
@@ -1741,19 +1728,23 @@ button,
     padding: 0 24px;
   }
 
+  .main-header {
+    background-image: url("../img/main-image-tablet@1x.jpg");
+    min-height: 638px;
+    -webkit-filter: none;
+    filter: none;
+  }
+
   .main-header__wrapper {
     min-width: 678px;
     width: 88.3%;
+    margin-bottom: 236px;
     padding-top: 30px;
   }
 
   .main-header__link {
     width: 38px;
     height: 20px;
-  }
-
-  .nav-list {
-    top: 30px;
   }
 
   .nav-list__item:not(:last-child) {
@@ -1767,20 +1758,10 @@ button,
     line-height: 17px;
   }
 
-  .main-section {
-    top: -50px;
-    margin-bottom: -60px;
-    background-image: url("../img/main-image-tablet@1x.jpg");
-    aspect-ratio: 1.33/1;
-    -webkit-filter: none;
-    filter: none;
-  }
-
   .main-section__wrapper {
     min-width: 678px;
     width: 88.3%;
-    min-height: 638px;
-    padding: 60px 0 10px 0;
+    padding-left: 0;
   }
 
   .main-section__wrapper h1 {
@@ -1800,8 +1781,8 @@ button,
   .travelling__wrapper {
     min-width: 678px;
     width: 88.3%;
-    min-height: 474px;
-    padding-top: 110px;
+    min-height: 464px;
+    padding-top: 100px;
   }
 
   .travelling__wrapper picture {
@@ -1993,6 +1974,38 @@ button,
     padding-bottom: 26px;
   }
 
+  .cruise-card__cover-title--astoria {
+    background-image: url("../img/catalog/cruise-astoria-tablet@1x.jpg");
+  }
+
+  .cruise-card__cover-title--elaine {
+    background-image: url("../img/catalog/cruise-olympia-tablet@1x.jpg");
+  }
+
+  .cruise-card__cover-title--atlantis {
+    background-image: url("../img/catalog/cruise-atlantis-tablet@1x.jpg");
+  }
+
+  .cruise-card__cover-title--odysseus {
+    background-image: url("../img/catalog/cruise-odysseus-tablet@1x.jpg");
+  }
+
+  .cruise-card__cover-title--olympia {
+    background-image: url("../img/catalog/cruise-olympia-tablet@1x.jpg");
+  }
+
+  .cruise-card__cover-title--aurora {
+    background-image: url("../img/catalog/cruise-aurora-tablet@1x.jpg");
+  }
+
+  .cruise-card__cover-title--leonor {
+    background-image: url("../img/catalog/cruise-leonor-tablet@1x.jpg");
+  }
+
+  .cruise-card__cover-title--minion {
+    background-image: url("../img/catalog/cruise-minion-tablet@1x.jpg");
+  }
+
   .cruise-card__info {
     padding: 35px;
     padding-top: 29px;
@@ -2038,12 +2051,13 @@ button,
 
   .form {
     width: 96.1%;
+    margin-left: 0;
     padding-top: 44px;
   }
 }
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
-  .main-section {
+  .main-header {
     background-image: url("../img/main-image-tablet@2x.jpg");
   }
 
@@ -2052,9 +2066,37 @@ button,
   }
 }
 
-@media (max-width: 852px) {
-  .main-section {
-    aspect-ratio: initial;
+@media (-webkit-min-device-pixel-ratio: 1.5) and (max-width: 1023px), (-o-min-device-pixel-ratio: 3/2) and (max-width: 1023px), (min-resolution: 144dpi) and (max-width: 1023px), (min-resolution: 1.5dppx) and (max-width: 1023px) {
+  .cruise-card__cover-title--astoria {
+    background-image: url("../img/catalog/cruise-astoria-tablet@2x.jpg");
+  }
+
+  .cruise-card__cover-title--elaine {
+    background-image: url("../img/catalog/cruise-olympia-tablet@2x.jpg");
+  }
+
+  .cruise-card__cover-title--atlantis {
+    background-image: url("../img/catalog/cruise-atlantis-tablet@2x.jpg");
+  }
+
+  .cruise-card__cover-title--odysseus {
+    background-image: url("../img/catalog/cruise-odysseus-tablet@2x.jpg");
+  }
+
+  .cruise-card__cover-title--olympia {
+    background-image: url("../img/catalog/cruise-olympia-tablet@2x.jpg");
+  }
+
+  .cruise-card__cover-title--aurora {
+    background-image: url("../img/catalog/cruise-aurora-tablet@2x.jpg");
+  }
+
+  .cruise-card__cover-title--leonor {
+    background-image: url("../img/catalog/cruise-leonor-tablet@2x.jpg");
+  }
+
+  .cruise-card__cover-title--minion {
+    background-image: url("../img/catalog/cruise-minion-tablet@2x.jpg");
   }
 }
 
@@ -2076,14 +2118,23 @@ button,
     width: 100%;
   }
 
-  .main-header[data-header-state=no-js] {
-    background-color: #f9fbfd;
+  .main-header {
+    background-image: url("../img/main-image-mobile@1x.jpg");
+    background-size: cover;
+    background-position: 46% 0;
+    min-height: 500px;
+  }
+
+  .main-header[data-header-state=open] {
+    padding-top: 170px;
+    min-height: auto;
   }
 
   .main-header__wrapper {
     position: relative;
     min-width: 290px;
     width: 90.62%;
+    margin-bottom: 128px;
     padding-top: 20px;
   }
 
@@ -2095,9 +2146,11 @@ button,
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s;
-    transition: 0.5s;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 185px;
+    padding: 20px clamp(15px, 4.7%, 50px);
+    background-color: #f9fbfd;
   }
 
   .main-header__wrapper[data-header-state=open] {
@@ -2175,10 +2228,6 @@ button,
   }
 
   .nav-list {
-    position: relative;
-    z-index: 1;
-    top: 0;
-    left: 0;
     width: 100%;
     max-width: 100%;
     margin: 0;
@@ -2217,26 +2266,10 @@ button,
     background-color: #011c40;
   }
 
-  .main-section {
-    top: -42px;
-    margin-bottom: -52px;
-    background-image: url("../img/main-image-mobile@1x.jpg");
-    background-size: cover;
-    background-position: 46% 0;
-    aspect-ratio: 1.5/1;
-  }
-
-  .main-section[data-header-state=no-js],
-  .main-section[data-header-state=open] {
-    margin-bottom: 0;
-    top: 0;
-  }
-
   .main-section__wrapper {
     min-width: 290px;
     width: 90.62%;
-    min-height: 500px;
-    padding: 52px 0 10px 0;
+    padding-bottom: 100px;
   }
 
   .main-section__wrapper h1 {
@@ -2256,8 +2289,8 @@ button,
   .travelling__wrapper {
     min-width: 290px;
     width: 90.62%;
-    min-height: 650px;
-    padding-top: 75px;
+    min-height: 640px;
+    padding-top: 65px;
   }
 
   .travelling__wrapper picture {
@@ -2438,7 +2471,7 @@ button,
   }
 
   .cruise-card__cover-title--olympia {
-    background-image: url("../img/catalog/cruise-odysseus-mobile@1x.jpg");
+    background-image: url("../img/catalog/cruise-olympia-mobile@1x.jpg");
   }
 
   .cruise-card__cover-title--aurora {
@@ -2517,20 +2550,20 @@ button,
   }
 }
 
-@media (max-width: 767px) and (hover: hover) {
-  .nav-list__link:hover:not(.focus-visible) {
-    color: #f9fbfd;
-    background-color: #011c40;
-  }
-}
-
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
-  .main-section {
+  .main-header {
     background-image: url("../img/main-image-mobile@2x.jpg");
   }
 
   .form-section {
     background-image: url("../img/form-image-mobile@2x.jpg");
+  }
+}
+
+@media (max-width: 767px) and (hover: hover) {
+  .nav-list__link:hover:not(.focus-visible) {
+    color: #f9fbfd;
+    background-color: #011c40;
   }
 }
 
@@ -2565,12 +2598,6 @@ button,
 
   .cruise-card__cover-title--minion {
     background-image: url("../img/catalog/cruise-minion-mobile@2x.jpg");
-  }
-}
-
-@media (max-width: 665px) {
-  .main-section {
-    aspect-ratio: initial;
   }
 }
 

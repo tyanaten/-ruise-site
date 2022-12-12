@@ -1,10 +1,41 @@
 .main-header {
-  position: relative;
-  z-index: 10;
+  min-height: 650px;
+  background-color: #00417f;
+  background-image: url("../img/main-image@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+
+  @media (max-width: 3000px) {
+    @include retina {
+      background-image: url("../img/main-image@2x.jpg");
+    }
+  }
+
+  @include vp-1023 {
+    background-image: url("../img/main-image-tablet@1x.jpg");
+    min-height: 638px;
+    filter: none;
+
+    @include retina {
+      background-image: url("../img/main-image-tablet@2x.jpg");
+    }
+  }
 
   @include vp-767 {
-    &[data-header-state="no-js"] {
-      background-color: $color-default-white;
+    background-image: url("../img/main-image-mobile@1x.jpg");
+    background-size: cover;
+    background-position: 46% 0;
+    min-height: 500px;
+
+    &[data-header-state="open"] {
+      padding-top: 170px;
+      min-height: auto;
+    }
+
+    @include retina {
+      background-image: url("../img/main-image-mobile@2x.jpg");
     }
   }
 }
@@ -18,11 +49,13 @@
   max-width: $vr-1160;
   min-height: 38px;
   margin: 0 auto;
+  margin-bottom: 181px;
   padding-top: 35px;
 
   @include vp-1023 {
     min-width: $vr-678;
     width: 88.3%;
+    margin-bottom: 236px;
     padding-top: 30px;
   }
 
@@ -30,12 +63,17 @@
     position: relative;
     min-width: $vr-290;
     width: 90.62%;
+    margin-bottom: 128px;
     padding-top: 20px;
 
     &[data-header-state="no-js"] {
       flex-direction: column;
       justify-content: flex-start;
-      transition: 0.5s;
+      width: 100%;
+      margin: 0;
+      margin-bottom: 185px;
+      padding: 20px clamp(15px, 4.7%, 50px);
+      background-color: $color-default-white;
     }
 
     &[data-header-state="open"] {

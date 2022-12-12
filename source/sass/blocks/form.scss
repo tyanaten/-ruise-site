@@ -1,5 +1,7 @@
 .form {
   width: 403px;
+  margin-bottom: auto;
+  margin-left: 25px;
   padding: 50px;
   padding-top: 42px;
   background-color: $color-default-black;
@@ -7,6 +9,7 @@
 
   @include vp-1023 {
     width: 96.1%;
+    margin-left: 0;
     padding-top: 44px;
   }
 

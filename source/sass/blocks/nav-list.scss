@@ -1,22 +1,10 @@
 .nav-list {
-  position: absolute;
-  top: 40px;
-  right: 2px;
   display: flex;
   flex-wrap: wrap;
   max-width: 80%;
   margin-left: 30px;
 
-  @include vp-1023 {
-    top: 30px;
-  }
-
-
   @include vp-767 {
-    position: relative;
-    z-index: 1;
-    top: 0;
-    left: 0;
     width: 100%;
     max-width: 100%;
     margin: 0;
