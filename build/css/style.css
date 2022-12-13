@@ -2127,6 +2127,7 @@ button,
 
   .main-header[data-header-state=open] {
     padding-top: 170px;
+    padding-bottom: 27px;
     min-height: auto;
   }
 
